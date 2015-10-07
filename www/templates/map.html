@@ -1,11 +1,11 @@
-<ion-view view-title="Map">
+<ion-view view-title="Map" ng-controller="MapCtrl">
 <ion-nav-bar>
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color: #04142B;">
         </button>
       </ion-nav-buttons>
       <ion-nav-buttons side="right">
-      	<a class="button button-icon icon ion-navigate"></a>
+      	<a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
       </ion-nav-buttons>
 </ion-nav-bar>
 

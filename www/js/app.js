@@ -59,22 +59,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
+    // .state('app.playlists', {
+    //   url: '/playlists',
+    //   views: {
+    //     'menuContent': {
+    //       templateUrl: 'templates/playlists.html',
+    //       controller: 'PlaylistsCtrl'
+    //     }
+    //   }
+    // })
 
      .state('app.map', {
       url: '/map',
       views: {
         'menuContent': {
           templateUrl: 'templates/map.html',
-          controller: 'PlaylistsCtrl'
+          controller: 'MapCtrl'
         }
       }
     })
@@ -84,21 +84,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/mednews.html',
-          controller: 'PlaylistsCtrl'
+         // controller: 'PlaylistsCtrl'
         }
       }
     })
 
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
+  // .state('app.single', {
+  //   url: '/playlists/:playlistId',
+  //   views: {
+  //     'menuContent': {
+  //       templateUrl: 'templates/playlist.html',
+  //       controller: 'PlaylistCtrl'
+  //     }
+  //   }
+  // });
 
 
   // if none of the above states are matched, use this as the fallback
