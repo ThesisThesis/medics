@@ -1,5 +1,5 @@
 <ion-view view-title="Medicine">
- <div class="bar bar-header item-input-inset">
+<!--  <div class="bar bar-header item-input-inset">
 	 
 	</div>
 	<div class="bar bar-header item-input-inset">
@@ -10,14 +10,20 @@
 	  <button class="button button-clear">
 	    Cancel
 	  </button>
-	</div>
+	</div> -->
   <ion-content>
 	 
     <ion-list>
-    	<ion-item></ion-item>
       <ion-item ng-repeat="medicine in medicines | filter:search" href="#/app/medicines/{{medicine.id}}" style="color:#04142B;">
         {{medicine.title}} 
       </ion-item>
     </ion-list>
   </ion-content>
+
+   <div class="tabs tabs-icon-top">
+    	<label class="item-input-wrapper" class="item item-icon-left">
+    		<input type="text" ng-model="search" placeholder="Search for medicine" style="width: 400px;">
+		</label>
+		<a class="button button-icon icon ion-ios-search"></a>
+	      </div>
 </ion-view>
