@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+ .icon{
+	color:#04142B;
+	/*background-color: #04142B;*/
+}
+
+h2,p{
+	color: #04142B;
+}
+
+.scroll-content{
+	background-color: #04142B;
+}
