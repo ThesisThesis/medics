@@ -7,19 +7,28 @@
   </ion-header-bar>
   <ion-content>
     <form ng-submit="doLogin()">
-      <div class="list">
+      <div class="card">
         <label class="item item-input">
-          <span class="input-label">Username</span>
+          <span class="input-label" style="color:#04142B;">Username</span>
           <input type="text" ng-model="loginData.username">
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
+          <span class="input-label" style="color:#04142B;">Password</span>
           <input type="password" ng-model="loginData.password">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-stable" type="submit" style="background-color:#04142B; color: white;">Log in</button>
         </label>
       </div>
     </form>
   </ion-content>
+  <div class="tabs tabs-icon-top">
+      <!-- <label class="item-input-wrapper" class="item item-icon-left">
+        <a class="button button-icon icon ion-camera"></a>
+        <input type="text" placeholder="Post Something..." style="width: 350px;">
+    </label>
+    <button ng-click="addPost()" class="button button-clear" style="color: #04142B;">
+      POST
+    </button> -->
+    </div>
 </ion-modal-view>
