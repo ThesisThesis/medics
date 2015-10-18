@@ -46,10 +46,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/profile',
     views: {
       'menuContent': {
-        templateUrl: 'templates/profile.html'
+        templateUrl: 'templates/profile.html',
+        controller: 'PostCtrl'
       }
     }
   })
+
+  .state('app.edit-profile', {
+    url: '/edit-profile/:num',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/edit.html',
+        controller: 'PostCtrl'
+      }
+    }
+  })
+
 
   .state('app.browse', {
       url: '/browse',

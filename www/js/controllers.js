@@ -66,6 +66,69 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('PostCtrl', function($scope, $http, $state) {
+    $scope.posts = [];
+  $scope.formData = {};
+  
+  $http.get('http://localhost/codeigniter/Posts').
+    then(function(response) {
+      console.log(response);
+      $scope.posts = response.data;
+    }, function(response) {
+      console.log(response);
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+    });
+  
+  $scope.addPost = function(){
+    if($scope.formData.id){
+      $scope.formData = {};
+    }
+    else{
+      $http.post('http://localhost/codeigniter/Posts', $scope.formData).
+        then(function(response) {
+          console.log(response);
+          $scope.formData.id = response.data.id;
+          $scope.posts.push($scope.formData);
+          $scope.formData = {};
+        }, function(response) {
+          console.log(response);
+        });
+      
+    }
+  }
+  $scope.delete = function(idx, id){
+    console.log(idx);
+    //delete($scope.todos[idx])
+    $http.delete('http://localhost/codeigniter/Posts/'+id).
+        then(function(response) {
+          console.log(response);
+          $scope.posts.splice(idx,1);
+        }, function(response) {
+          console.log(response);
+        });
+  }
+  $scope.edit = function(idx){
+    $scope.formData = $scope.postcontent[idx];
+  }
+
+  $scope.editPosts = function(){
+    console.log($scope.formData);
+    if($scope.formData.id){
+      console.log($scope.formData);
+      $scope.formData = {};
+    }
+    else{
+      $http.put('http://localhost/codeigniter/Posts', $scope.formData);
+      console.log($scope.formData);
+      $scope.formData = {};
+      $state.go('app.profile');
+    }
+  }
+
+
+})
+
 .controller('MedsCtrl', function($scope, $stateParams) {
 })
 
