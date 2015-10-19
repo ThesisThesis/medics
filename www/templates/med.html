@@ -1,4 +1,4 @@
-<ion-view view-title="Medicine">
+<ion-view view-title="Medicine" ng-controller="AppCtrl">
 <!--  <div class="bar bar-header item-input-inset">
 	 
 	</div>
@@ -12,9 +12,9 @@
 	  </button>
 	</div> -->
   <ion-content>
-	 
+	 <!--  href="#/app/medicines/{{medicine.id}}" !-->
     <ion-list>
-      <ion-item ng-repeat="medicine in medicines | filter:search" href="#/app/medicines/{{medicine.id}}" style="color:#04142B;">
+      <ion-item ng-repeat="medicine in medicines | filter:search" ng-click="open()" style="color:#04142B;">
         {{medicine.title}} 
       </ion-item>
     </ion-list>
